@@ -1,0 +1,20 @@
+C-interp:  
+    Usage:  ln -s C-interp sourceFileName  ->  sourceFileName
+    Description: A shell script that acts as the host of a soft link. It's meant to act as a compiler, creating temporary directories for the .c source files being fed into it. After the soft link creation, the executable can be called by the name of the source file without the .c extension. It will create a directory called "CS146Temp" in the /tmp directory for storing all temporary files needed to run the executable. Another directory, "Trash", is created for storing srm'd [see below] files. After running the executable, it will delete the contents of the CS146Temp directory and then delete the directory itself. The script will keep the Trash directory as the user may want to retrieve the files after running the executable. Otherwise, it would defeat the purpose of srm, acting just like the command rm.
+
+every
+    Usage:  every [-N[,M]]  [absoluteFilePath...]
+    Description: Every will print M lines, for every N lines encountered from an absolute filePath provided. If no filePath is provided, STDIN will act as the input. If N is specified, it will set N to the input and set 1 to be the value of M. If M is specified, the default value 1 is overriden. If neither N or M is provided, it will attempt to look into the environment variable "EVERY" and set N and M accordingly to the conditions above. If N and M aren't specified and "EVERY" is not found, the default values are 1,1 respectively.
+
+srm
+    Usage:  srm absoluteFilePath  [absoluteFilePath...]
+    Description: A c script that will safely remove a file. Unlike the UNIX rm function, this command will relocate the file provided, allowing for the restoration of the said file. The mechanism used to simulate the "deletion" of the file is a combination of moving files as well as a naming convention. Srm'd files are moved to the trash directory specified by the environment variable $TRASH. Should this not be specified, default value is "/tmp/Trash". The file at the source is unlinked. If it's the only link to said file, it will be deleted. Srm'd files create a log entry defined in "/tmp/Trash/trashMap.txt". This is later used by unrm. Srm'd directories are prefixed with "._" effectively making them hidden by UNIX conventions. Should the script be provided with a nonexistent file or directory, it will print an error message. If supplied with a nonexistent file, it will print an error message. NOTE: The contents of an srm'd directory are not srm'd themselves.
+
+unrm
+    Usage: unrm absoluteFilePath [absoluteFilePath...]
+    Description: A c script that will undelete a file from the trash, effectively restoring it. If the pathName provided is a file, it will consult "trashMap.txt" to find the original source of the file. It will then copy over the file to the destination and unlink it from the trash directory. Replaces the directory naming convention of the '._' prefix with an empty string, resulting in the original directory name. 
+    NOTE: Based on the implementation of the unrm, an srm'd file does not have to be provided with the absolute file path because it will be looked up at the mapping defined by trashMap.txt. In addition, when unrm'ing directories, ensure that the directory file name follows the "._" naming convention or it won't be seen by the script.
+
+trash
+    Usage: trash
+    Description: A shell script that will purge the trash directory. Any files still in the Trash when this command is called will be deleted permanently. In addition, it will reset the trashMap.txt to be empty. Note: srm'd directories will still remain in the file system as it's simply too expensive time-wise to recursively traverse the /tmp and /home directories in search for these files.

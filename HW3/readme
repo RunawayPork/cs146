@@ -1,0 +1,23 @@
+lss
+	Usage: lss [flags] [files]
+	Description: A wrapper function over the built-in UNIX ls function. If no arguments are provided, will invoke the ‘ls -l’ UNIX command. Extra arguments, flags and other files may be provided to invoke additional functionalities of the ls command. Should there be an invalid input, such as a nonexistent file or invalid flags, the script will detect the error and print an appropriate error message.
+
+srm
+	Usage: srm file [file]
+	Description: A shell script that will safely remove a file. Unlike the UNIX rm function, this command will relocate the file provided, allowing for the restoring of the said file. The mechanism used to simulate the "deletion" of the file is a naming convention. Srm'd files are prefixed with "._" effectively making them hidden by UNIX conventions. Should the script be provided with a nonexistent file, it will print an error message. 
+
+unrm
+	Usage: unrm file [files]
+	Description: A shell script that will undelete a file from the trash, effectively restoring it. Replaces the naming convention of the '._' prefix with an empty string. If supplied with a nonexistent file, it will print an error message. Upon successful operation, a message will be displayed indicating success.
+
+lsrm
+	Usage: lsrm
+	Description: A shell script that will invoke the ls -l command on all files currently in the Trash. If the trash is empty, it will print a message indicating so.
+
+trash
+	Usage: trash
+	Description: A shell script that will purge the trash. Any files still in the Trash when tsi command is called will be deleted permanently. If there is nothing in the trash, it will indicate that there is nothing to delete.
+
+durm
+	Usage: durm
+	Description: Upon invoking this command, it will calculate the storage gains (in bytes) if the Trash bin was purged. If there is nothing in the Trash, it will indicate that there is no storage to be gained (0 bytes). 

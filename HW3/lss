@@ -1,0 +1,16 @@
+#!/bin/bash
+
+flags=''
+files=''
+for i in $@
+    do
+
+    if echo $i | grep '-' >/dev/null 2>&1; then
+        flags="$flags $i"
+    else
+        files="$files $i"
+    fi
+
+    done
+
+ls -l $flags $files 2>/dev/null | sort -k 5nr

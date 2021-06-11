@@ -1,0 +1,28 @@
+
+if [ $# -eq 0 ]
+    then
+    echo "Invalid input. Please supply one or more files."
+
+else
+    for file in $@
+        do
+
+        fileName="._$file"
+
+        if [ -e $fileName ]; then
+            if [ -d $fileName ]; then
+                mv "$fileName" "$file"
+                echo "Directory [$fileName] has been restored."
+            fi
+            if [ -f $fileName ]; then
+                mv "$fileName" "$file"
+                echo "File [$fileName] has been restored."
+            fi
+
+        else
+            echo "Error: The file [$1] does not exist in the trash or has already been restored."
+        fi
+
+        done
+
+fi

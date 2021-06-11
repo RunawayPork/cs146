@@ -1,0 +1,203 @@
+---2.1.a---
+[rat,mouse] share have the most in common with 16675 orthologs.
+[yeast,alpaca] share have the least in common with 5 orthologs.
+
+
+---2.1.b---
+[human,rat] share 15207 orthologs.
+[human,mouse] share 15997 orthologs.
+[human,fly] share 3262 orthologs.
+[human,worm] share 2574 orthologs.
+[human,yeast] share 1177 orthologs.
+[human,alpaca] share 26 orthologs.
+[human,cow] share 15642 orthologs.
+[human,horse] share 15553 orthologs.
+[human,pig] share 15745 orthologs.
+[human,sheep] share 15602 orthologs.
+[human,cat] share 15501 orthologs.
+[human,dog] share 15617 orthologs.
+[human,guinea_pig] share 15085 orthologs.
+[human,rabbit] share 14340 orthologs.
+[human,chicken] share 12084 orthologs.
+[human,duck] share 12029 orthologs.
+[human,turkey] share 11417 orthologs.
+[rat,mouse] share 16675 orthologs.
+[rat,fly] share 3133 orthologs.
+[rat,worm] share 2468 orthologs.
+[rat,yeast] share 1121 orthologs.
+[rat,alpaca] share 25 orthologs.
+[rat,cow] share 14989 orthologs.
+[rat,horse] share 14804 orthologs.
+[rat,pig] share 15038 orthologs.
+[rat,sheep] share 14911 orthologs.
+[rat,cat] share 14833 orthologs.
+[rat,dog] share 14863 orthologs.
+[rat,guinea_pig] share 14664 orthologs.
+[rat,rabbit] share 13838 orthologs.
+[rat,chicken] share 11603 orthologs.
+[rat,duck] share 11575 orthologs.
+[rat,turkey] share 10975 orthologs.
+[mouse,fly] share 3274 orthologs.
+[mouse,worm] share 2568 orthologs.
+[mouse,yeast] share 1170 orthologs.
+[mouse,alpaca] share 26 orthologs.
+[mouse,cow] share 15581 orthologs.
+[mouse,horse] share 15455 orthologs.
+[mouse,pig] share 15646 orthologs.
+[mouse,sheep] share 15528 orthologs.
+[mouse,cat] share 15384 orthologs.
+[mouse,dog] share 15475 orthologs.
+[mouse,guinea_pig] share 15350 orthologs.
+[mouse,rabbit] share 14418 orthologs.
+[mouse,chicken] share 12101 orthologs.
+[mouse,duck] share 12045 orthologs.
+[mouse,turkey] share 11424 orthologs.
+[fly,worm] share 3264 orthologs.
+[fly,yeast] share 1270 orthologs.
+[fly,alpaca] share 11 orthologs.
+[fly,cow] share 3199 orthologs.
+[fly,horse] share 3229 orthologs.
+[fly,pig] share 3175 orthologs.
+[fly,sheep] share 3171 orthologs.
+[fly,cat] share 3171 orthologs.
+[fly,dog] share 3147 orthologs.
+[fly,guinea_pig] share 3228 orthologs.
+[fly,rabbit] share 2938 orthologs.
+[fly,chicken] share 2996 orthologs.
+[fly,duck] share 3023 orthologs.
+[fly,turkey] share 2856 orthologs.
+[worm,yeast] share 1213 orthologs.
+[worm,alpaca] share 9 orthologs.
+[worm,cow] share 2520 orthologs.
+[worm,horse] share 2559 orthologs.
+[worm,pig] share 2491 orthologs.
+[worm,sheep] share 2496 orthologs.
+[worm,cat] share 2514 orthologs.
+[worm,dog] share 2485 orthologs.
+[worm,guinea_pig] share 2538 orthologs.
+[worm,rabbit] share 2305 orthologs.
+[worm,chicken] share 2360 orthologs.
+[worm,duck] share 2385 orthologs.
+[worm,turkey] share 2269 orthologs.
+[yeast,alpaca] share 5 orthologs.
+[yeast,cow] share 1167 orthologs.
+[yeast,horse] share 1186 orthologs.
+[yeast,pig] share 1144 orthologs.
+[yeast,sheep] share 1140 orthologs.
+[yeast,cat] share 1142 orthologs.
+[yeast,dog] share 1134 orthologs.
+[yeast,guinea_pig] share 1164 orthologs.
+[yeast,rabbit] share 1055 orthologs.
+[yeast,chicken] share 1092 orthologs.
+[yeast,duck] share 1097 orthologs.
+[yeast,turkey] share 1055 orthologs.
+[alpaca,cow] share 24 orthologs.
+[alpaca,horse] share 25 orthologs.
+[alpaca,pig] share 21 orthologs.
+[alpaca,sheep] share 23 orthologs.
+[alpaca,cat] share 23 orthologs.
+[alpaca,dog] share 26 orthologs.
+[alpaca,guinea_pig] share 26 orthologs.
+[alpaca,rabbit] share 25 orthologs.
+[alpaca,chicken] share 20 orthologs.
+[alpaca,duck] share 9 orthologs.
+[alpaca,turkey] share 22 orthologs.
+[cow,horse] share 15430 orthologs.
+[cow,pig] share 15656 orthologs.
+[cow,sheep] share 16455 orthologs.
+[cow,cat] share 15382 orthologs.
+[cow,dog] share 15436 orthologs.
+[cow,guinea_pig] share 14836 orthologs.
+[cow,rabbit] share 14203 orthologs.
+[cow,chicken] share 11850 orthologs.
+[cow,duck] share 11829 orthologs.
+[cow,turkey] share 11243 orthologs.
+[horse,pig] share 15388 orthologs.
+[horse,sheep] share 15355 orthologs.
+[horse,cat] share 15289 orthologs.
+[horse,dog] share 15301 orthologs.
+[horse,guinea_pig] share 14714 orthologs.
+[horse,rabbit] share 14192 orthologs.
+[horse,chicken] share 11773 orthologs.
+[horse,duck] share 11825 orthologs.
+[horse,turkey] share 11219 orthologs.
+[pig,sheep] share 15645 orthologs.
+[pig,cat] share 15704 orthologs.
+[pig,dog] share 15493 orthologs.
+[pig,guinea_pig] share 14859 orthologs.
+[pig,rabbit] share 14201 orthologs.
+[pig,chicken] share 11863 orthologs.
+[pig,duck] share 11836 orthologs.
+[pig,turkey] share 11203 orthologs.
+[sheep,cat] share 15317 orthologs.
+[sheep,dog] share 15405 orthologs.
+[sheep,guinea_pig] share 14742 orthologs.
+[sheep,rabbit] share 14182 orthologs.
+[sheep,chicken] share 11774 orthologs.
+[sheep,duck] share 11764 orthologs.
+[sheep,turkey] share 11155 orthologs.
+[cat,dog] share 15491 orthologs.
+[cat,guinea_pig] share 14734 orthologs.
+[cat,rabbit] share 14073 orthologs.
+[cat,chicken] share 11695 orthologs.
+[cat,duck] share 11695 orthologs.
+[cat,turkey] share 11090 orthologs.
+[dog,guinea_pig] share 14715 orthologs.
+[dog,rabbit] share 14146 orthologs.
+[dog,chicken] share 11748 orthologs.
+[dog,duck] share 11744 orthologs.
+[dog,turkey] share 11151 orthologs.
+[guinea_pig,rabbit] share 13707 orthologs.
+[guinea_pig,chicken] share 11711 orthologs.
+[guinea_pig,duck] share 11672 orthologs.
+[guinea_pig,turkey] share 11092 orthologs.
+[rabbit,chicken] share 10962 orthologs.
+[rabbit,duck] share 11014 orthologs.
+[rabbit,turkey] share 10424 orthologs.
+[chicken,duck] share 12344 orthologs.
+[chicken,turkey] share 11799 orthologs.
+[duck,turkey] share 11691 orthologs.
+
+
+---2.2.a---
+2011-07-01
+        Amazon =  209.49
+        Microsoft =  26.02
+
+2011-07-05
+        Amazon =  213.19
+        Microsoft =  26.03
+
+Both companies stock prices went up after the 4th of July. Amazon saw a 1.76% increase. Microsoft saw an increase of a cent.
+
+
+---2.2.b---
+2011-10-26 -29.07
+
+In October 10, 2011, Amazon's stock prices dipped $29.07 compared to the prior day's selling price.
+
+
+---2.2.c---
+CSX      2011-06-16      -66.7032 %
+
+Among all the companies, CSX suffered the worst stock drop on June 6, 2011 with 66% of the its stock value dropping compared to the day before.
+
+
+Spiral Galaxies:
+There are 165833 galaxies that have P_SP = 0.
+There are 66906 galaxies that have P_SP > 0.5.
+There are 3943 galaxies that have P_SP = 1.
+
+
+Histogram:
+0 525464 192.035
+1 94299 329.484
+2 39115 449.432
+3 22636 510.712
+4 15938 544.275
+5 13520 565.314
+6 11583 589.788
+7 10382 614.252
+8 12503 640.813
+9 15490 691.263
+10 4437 730.696

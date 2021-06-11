@@ -1,0 +1,2 @@
+#!/bin/bash
+chmod +x -f $@ || echo "The file \"$@\" does not exist." >&2

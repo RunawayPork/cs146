@@ -1,0 +1,41 @@
+#!/bin/bash
+if [ $1 == "-f" ]; then
+    IFS=`echo $2 | cut -c1-1` read -ra array <<< $2
+    start=3
+else
+    IFS=`echo $1 | cut -c1-1` read -ra array <<< $1
+    start=2
+fi
+#for index in "${!array[@]}"
+#do
+#    echo "$index ${array[index]}"
+#done
+
+
+
+
+for ((i=$start; i<=$#; i++))
+do 
+    file=`echo ${!i}`
+    if [ -f $file ]; then
+        newFile=`echo "$file" | sed "s;${array[1]};${array[2]};" 2>/dev/null` 
+        if [ "$newFile" == "" ]; then
+            continue
+        fi
+
+        if [ "$newFile" != "$file" ]; then
+            if [ -f "$newFile" -a "-f" = $1 ]; then
+                echo "Forced: mv $file $newFile"
+            elif [ -f "$newFile" -a "-f" != $1 ]; then
+                echo "Warning: $newFile already exists."
+            else
+                echo "mv $file $newFile"
+            fi
+        fi
+    fi
+done
+
+
+
+#./rename ';\.c$;.C;' src/*.c
+#./rename ';\.;.p10.;' output.*

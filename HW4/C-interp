@@ -1,0 +1,36 @@
+trap Cleanup 0 1 2 3 15
+
+
+#Deleting the temp dirs
+#We keep the Trash dir in case we want to
+#restore files in a later time.
+Cleanup(){
+    cd /tmp
+    if [ -e "CS146Temp" ]; then
+        cd CS146Temp
+        rm `ls | xargs`
+        cd ..
+        rmdir CS146Temp
+    fi
+}
+
+fileName=$(echo $0 | sed 's\./\\')
+curPath=`pwd`
+
+#Making the tempDir in /tmp
+cd /tmp
+mkdir CS146Temp 2>/dev/null
+mkdir Trash 2>/dev/null
+export TRASH="/tmp/Trash"
+cd CS146Temp
+
+#Creating the object file and moving it to tmpDir
+cd $curPath
+gcc -o myprog $fileName.c
+mv myprog /tmp/CS146Temp/myprog
+
+#Running the program
+cd /tmp/CS146Temp
+myprog $@
+
+Cleanup

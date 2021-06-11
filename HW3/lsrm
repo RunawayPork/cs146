@@ -1,0 +1,9 @@
+#!/bin/bash
+
+count=`ls -a | grep -c "._"`
+
+if [ $count -eq 0 ]; then
+    echo "No files in the Trash."
+else
+    lss ._*
+fi

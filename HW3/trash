@@ -1,0 +1,11 @@
+#!/bin/bash
+
+count=`ls -a | grep -c "._"`
+
+if [ $count -eq 0 ]; then
+    echo "Nothing in the trash to delete"
+else
+    files=`ls -a | grep "._" | xargs`
+    rm -rf $files
+    echo "Files: [$files] successfully deleted."
+fi

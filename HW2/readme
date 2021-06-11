@@ -1,0 +1,12 @@
+Q1: cat x y > y: The contents of x will be put into y. 
+    cat x >> x: The input file and the output file (x) are the same so it would get stuck in an infinite loop with content being consumed (from the input) and inserted (into the output). It's an infinite loop up until there is no more space in the disk or until it reaches the max file-size limit.
+
+Q2: This shell script will give every file provided to it an executable.
+
+cx: Requires a file[s] to be inputted. Outputs error message if file not found.
+nf: No arguments needed. Outputs total number of files in current directory.
+lss: No arguments needed. Outputs a sorted list of files in descending order of size.
+whoson: No arguments needed. Outputs a list of students who belong to the ugrad group and logged in to the machine.
+howmany: No arguments needed. Outputs how many undergrads are logged in the current machine.
+valid: Requires a string. Returns 'yes' or 'no' if the supplied string is a valid shell variable name.
+prargs: Optional command line arguments. Pretty prints the argv array in order of [index]:[value]

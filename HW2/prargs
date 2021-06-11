@@ -1,0 +1,9 @@
+#!/bin/bash
+counter=0;
+echo $counter: \"`echo $0 | grep  -o 'prargs'`\"
+counter=`expr $counter + 1`
+for i;
+do
+    echo $counter: \"$i\"
+    counter=`expr $counter + 1`
+done

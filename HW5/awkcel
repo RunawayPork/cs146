@@ -1,0 +1,43 @@
+#!/bin/bash
+# This is a front-end to awk(1), which allows NAMED COLUMNS to be accessed as variables.
+# USAGE: awkcel {any standard awk program} FILENAME
+# This script expects exactly two arguments.
+# The first argument is an awk program that allows use of variables as described below.
+# The second argument is an input file with a constant number of tab-separated columns.
+# Any line that starts with a hash ("#") is assumed a comment, and discarded.
+# The first (non-comment) line is the HEADER.
+# The HEADER line contains tab-separated names of the columns.
+# These column names must be valid awk(1) variable names.
+# Each subsequent line must have the same number of tab-separated columns as the HEADER.
+# COLUMNS SHOULD NOT BE EMPTY: behavior is undefined if any line has two adjacent tabs.
+# Upon each line of input, values can be accessed using the name defined in the HEADER.
+
+
+funcBody=$1
+inputFile=$2
+#echo $funcBody
+#echo $inputFile
+
+columns=`awk 'BEGIN{ FS="\t" } NR==1 {print $0}' $2 | tr "\t" "\n"`
+colNo=`echo "$columns" | wc -l `
+
+declare -A headers
+headerCount=0
+dollar="$"
+for header in $columns
+do  
+    headerCount=`expr $headerCount + 1`
+    headers[$header]=$headerCount
+    #echo $header = ${headers[$header]}
+done
+
+for header in ${!headers[@]}
+do
+   funcBody=`echo $funcBody | sed "s/\b$header\b/$dollar${headers[$header]}/g"`
+   #i=0
+done
+
+#echo $funcBody
+awk "$funcBody" $2
+
+

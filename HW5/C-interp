@@ -1,0 +1,4 @@
+fileName=$(echo $0 | sed 's\./\\')
+gcc -pthread -o myprog $fileName.c
+myprog $@
+rm myprog

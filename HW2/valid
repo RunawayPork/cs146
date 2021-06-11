@@ -1,0 +1,7 @@
+#!/bin/bash
+if echo $@ | grep -c -q -e "^[_|a-zA-Z][_0-9a-zA-Z]*$" 
+then
+    echo "yes"
+else
+    echo "no"
+fi

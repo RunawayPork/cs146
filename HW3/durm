@@ -1,0 +1,18 @@
+
+count=`ls -a | grep -c "._"`
+
+if [ $count -eq 0 ]; then
+    echo "No files in the Trash."
+
+else
+    total=`ls -hal| grep '._' | awk '{print $5}' | xargs`
+    set $total
+
+    sum=0
+    for size in $@
+        do
+        sum=`expr $sum + $size`
+        done
+
+    echo "$sum bytes can be saved by emptying the Trash."
+fi
